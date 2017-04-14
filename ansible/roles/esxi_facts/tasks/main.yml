@@ -1,14 +1,13 @@
 ---
-- hosts: esxi
-  tasks:
-    - name: Gather VM facts
-      delegate_to: localhost
-      vmware_vm_facts:
-        hostname: {{ esxi_host }}
-        username: {{ user }}
-        password: {{ passwd }}
-        validate_certs: no
-      register: vm_results
-    
-    - name: Print output
-      debug: var=vm_results
+- name: Gather VM facts
+  delegate_to: localhost
+  vmware_vm_facts:
+    hostname: "{{ esxi_host }}"
+    username: "{{ user }}"
+    password: "{{ passwd }}"
+    validate_certs: no
+  register: vm_results
+
+- name: Print output
+  debug: var=vm_results
+

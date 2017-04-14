@@ -1,1 +1,3 @@
 This is an ansible automation directory.
+The playbooks in this directory can be safely run with following command:
+ansible-playbook -i inventories/staging/ site.yml --extra-vars "target=esxi2" <--list-hosts/--list-tasks/--check>>

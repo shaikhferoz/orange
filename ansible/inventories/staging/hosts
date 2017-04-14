@@ -1,0 +1,3 @@
+[esxihosts]
+esxi1 ansible_ssh_host=10.239.64.40
+esxi2 ansible_ssh_host=10.237.158.141 
